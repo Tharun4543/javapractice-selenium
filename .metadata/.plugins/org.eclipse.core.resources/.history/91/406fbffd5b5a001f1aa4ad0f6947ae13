@@ -1,0 +1,27 @@
+package selenium_day12_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DragandDropByPractice2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.jqueryscript.net/demo/Price-Range-Slider-jQuery-UI/");
+		driver.manage().window().maximize();
+		WebElement min_slider_loc = driver.findElement(By.xpath("//span[1]"));
+		WebElement max_slider_loc = driver.findElement(By.xpath("//span[2]"));
+		System.out.println(min_slider_loc.getLocation());
+		System.out.println(max_slider_loc.getLocation());
+		Actions act = new Actions(driver);
+		act.dragAndDropBy(max_slider_loc, 150, 249);
+		Thread.sleep(3000);
+		driver.close();
+	}
+
+}

@@ -1,0 +1,28 @@
+package selenium_day12_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DragandDropPractice {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		WebElement drag_source_ele_loc = driver.findElement(By.xpath("//p[normalize-space()='Drag me to my target']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", drag_source_ele_loc);
+		WebElement drag_des_ele_loc = driver.findElement(By.xpath("//p[normalize-space()='Drop here']"));
+		Actions act = new Actions(driver);
+		act.dragAndDrop(drag_source_ele_loc, drag_des_ele_loc);
+		Thread.sleep(3000);
+		
+
+	}
+
+}

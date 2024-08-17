@@ -1,0 +1,22 @@
+package selenium_day12_practice;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseActionsPractice1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		//create actions class object in order to handle mouse actions
+		WebDriver driver1 = null;
+		Actions act = new Actions(driver1);
+		
+		//mouse over element
+	
+
+	}
+
+}

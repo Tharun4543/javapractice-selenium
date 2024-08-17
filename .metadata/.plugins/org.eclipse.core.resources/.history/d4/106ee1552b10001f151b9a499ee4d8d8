@@ -1,0 +1,23 @@
+package selenium_day2_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PreDefLocatorsPractice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//id
+		WebDriver driver = new ChromeDriver();
+		//driver.get("https://www.facebook.com/");
+		//finding an element using an id
+		//driver.findElement(By.id("email")).sendKeys("Tharun");
+		//driver.findElement(By.id("pass")).sendKeys("Chinna@6304");
+		
+		//name
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package selenium_day13_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class KeyBordActionsPractice1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://text-compare.com/");
+		driver.manage().window().maximize();
+		WebElement input_text_ele = driver.findElement(By.cssSelector("#inputText1"));
+		input_text_ele.sendKeys("What you think, you become");
+		Actions act = new Actions(driver);
+//		act.keyDown(Keys.CONTROL).sendKeys("a").perform();
+//		act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
+//		act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+//		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
+		
+		act.keyDown(Keys.CONTROL).sendKeys("t").keyUp(Keys.CONTROL).perform();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		
+		Thread.sleep(3000);
+		driver.close();
+	}
+
+}

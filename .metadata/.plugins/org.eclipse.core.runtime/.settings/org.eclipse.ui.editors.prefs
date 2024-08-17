@@ -1,0 +1,7 @@
+AbstractTextEditor.Accessibility.UseCustomCarets=false
+AbstractTextEditor.Accessibility.WideCaret=false
+comment_stylePreferences=NONE
+comment_text=false
+currentLine=false
+eclipse.preferences.version=1
+showCaretOffset=false

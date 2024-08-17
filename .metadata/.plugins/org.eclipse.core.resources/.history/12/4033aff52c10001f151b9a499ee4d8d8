@@ -1,0 +1,20 @@
+package selenium_day2_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PreDefLocatorsPractice2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		Thread.sleep(1000);
+		//className - which helps to find multiple web elements 
+		System.out.println(driver.findElement(By.className("//a")).getSize());
+		driver.quit();
+	}
+
+}

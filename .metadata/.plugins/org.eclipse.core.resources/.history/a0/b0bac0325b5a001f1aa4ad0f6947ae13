@@ -1,0 +1,10 @@
+package selenium_day12_practice;
+
+public class DragandDropByPractice2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

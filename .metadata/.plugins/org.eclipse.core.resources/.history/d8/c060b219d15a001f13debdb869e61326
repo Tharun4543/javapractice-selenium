@@ -1,0 +1,41 @@
+package selenium_day13_practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class KeyBordActionsPractice1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		driver.get("https://text-compare.com/");
+//		driver.manage().window().maximize();
+//		WebElement input_text_ele = driver.findElement(By.cssSelector("#inputText1"));
+//		input_text_ele.sendKeys("What you think, you become");
+//		Actions act = new Actions(driver);
+//		act.keyDown(Keys.CONTROL).sendKeys("a").perform();
+//		act.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
+//		act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+//		act.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
+//		
+//		act.keyDown(Keys.CONTROL).sendKeys("t").keyUp(Keys.CONTROL).perform();
+		driver.get("https://en.wikipedia.org/wiki/Wikipedia:About");
+		driver.manage().window().maximize();
+//		driver.switchTo().frame("frame-one796456169");
+		WebElement new_window_abuse_loc = driver.findElement(By.xpath("//a[normalize-space()='general introduction']"));
+		//js.executeScript("arguments[0].scrollIntoView();", new_window_abuse_loc);
+		Actions act = new Actions(driver);
+		act.moveToElement(new_window_abuse_loc).perform();
+		Thread.sleep(3000);
+		act.keyDown(Keys.CONTROL).keyDown(Keys.ENTER).keyUp(Keys.ENTER).keyUp(Keys.CONTROL).perform();
+		Thread.sleep(10000);
+		driver.close();
+	}
+
+}

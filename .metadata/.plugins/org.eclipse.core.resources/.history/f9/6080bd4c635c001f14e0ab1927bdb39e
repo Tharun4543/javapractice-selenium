@@ -1,0 +1,12 @@
+package selenium_day15_practice;
+
+public class FileUploadPractice1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package selenium_day12_practice;
+
+public class RightClickPractice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
